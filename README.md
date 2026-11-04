@@ -1,19 +1,20 @@
 # 百应外呼工作台发布与下载
 
-当前正式版本：**0.4.7**。本仓库只发布安装包、更新资产和员工文档，源码在私有仓库维护。
+当前正式版本：**0.4.8**。本仓库发布程序安装包、更新资产、员工文档及经过逐设备加密与签名的 Token 同步文件，源码在私有仓库维护。
 
-- [下载 0.4.7](https://github.com/qnwhageqlavs-jpg/byai-local-workbench-releases/releases/tag/v0.4.7)
+- [下载 0.4.8](https://github.com/qnwhageqlavs-jpg/byai-local-workbench-releases/releases/tag/v0.4.8)
 - [员工操作指南](USER_GUIDE.md)
-- [完整版本说明](https://github.com/qnwhageqlavs-jpg/byai-local-workbench-releases/releases/download/v0.4.7/CHANGELOG.md)
-- [升级与迁移说明](https://github.com/qnwhageqlavs-jpg/byai-local-workbench-releases/releases/download/v0.4.7/MIGRATION.md)
-- [已知限制](https://github.com/qnwhageqlavs-jpg/byai-local-workbench-releases/releases/download/v0.4.7/KNOWN-LIMITATIONS.md)
+- [BYAI Token 自动同步：首次配置](CREDENTIAL_SYNC.md)
+- [完整版本说明](https://github.com/qnwhageqlavs-jpg/byai-local-workbench-releases/releases/download/v0.4.8/CHANGELOG.md)
+- [升级与迁移](https://github.com/qnwhageqlavs-jpg/byai-local-workbench-releases/releases/download/v0.4.8/MIGRATION.md)
+- [已知限制](https://github.com/qnwhageqlavs-jpg/byai-local-workbench-releases/releases/download/v0.4.8/KNOWN-LIMITATIONS.md)
 
-本次基于 0.4.6：更新下载显示真实进度，慢下载持续查询，临时状态读取失败自动重试，刷新或浏览器后退返回可接续进度；校验完成后由用户点击安装并重启。精简清洗、匹配、仪表盘及开工准备页的重复说明，保留业务功能与必要状态提示。
+本次新增 BYAI Token 的 GitHub 加密集中发布与自动同步，CSMS 不变；修复原文件移除后有效清洗结果不可匹配、重新扫描沿用旧文件版本；话术核验明确区分过期、认证、权限、名称及连接问题，集中提示系统凭据问题，保留文件准备结果与原文件错误。
 
-0.4.6 更新自身时仍使用旧更新界面，新进度条在安装 0.4.7 后生效。若旧页面慢下载等待超时，可退出程序后使用本版官方 Setup 覆盖原程序目录并保留环境配置。数据库结构仍为版本 7，不清空话术、排期、配置或执行历史。
+同事首次需生成设备申请码，由负责人添加授权；负责人保存仅所选仓库 Contents 读写权限的 GitHub 发布凭据。完成授权并发布后，同事打开工作台或点击同步即可更新 BYAI Token 和到期时间。仅安装新版不会自动完成授权，不会发布真实 Token。凭据文件与程序 Release 分开管理，不在程序发布附件中混放 Token 包。
 
-安装前退出旧版并核对 SHA-256。独立本地 0.4.4/0.4.5 构建首次升级必须使用安装包同目录覆盖并保留 workbench-profile.json，详见迁移说明。正式版日常使用并检查公开更新，测试版用于本地验证，两套数据不自动合并。
+正式版可在「帮助与更新」检查并下载；校验通过后人工安装并重启。0.4.6 首次慢网络升级仍可使用本版 Setup。数据库 schema 保持 7，保留排期、话术、配置和执行历史；正式/测试数据继续隔离，不自动合并。覆盖安装时保留原程序目录和 workbench-profile.json。
 
-企业透明加密读取需管理员完成白名单授权并现场验证。独立测试环境若连接相同百应账号，真正执行外呼仍会影响远端账号。
+透明加密读取仍需管理员给内置 Python 配置白名单；同一百应账号下测试执行会创建真实外呼任务。新 Token 同步经过模拟多设备测试，实际员工电脑授权和网络需现场验证。
 
-客户资料、个人数据、凭据及数据库不得提交到本仓库。旧正式版本继续保留。
+客户资料、个人数据、明文凭据、任何私钥和数据库不得提交到本仓库。旧正式版本继续保留。
