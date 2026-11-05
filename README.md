@@ -1,20 +1,25 @@
 # 百应外呼工作台发布与下载
 
-当前正式版本：**0.4.9**。本仓库提供 Windows 安装包、更新资产、员工指南与逐设备加密签名的 Token 同步文件，源码在私有仓库维护。
+当前正式版本：**0.4.10**。本仓库提供Windows安装包、程序更新资产与员工指南，源码在私有仓库维护。
 
-- [下载 0.4.9](https://github.com/qnwhageqlavs-jpg/byai-local-workbench-releases/releases/tag/v0.4.9)
+- [下载0.4.10](https://github.com/qnwhageqlavs-jpg/byai-local-workbench-releases/releases/tag/v0.4.10)
 - [员工操作指南](USER_GUIDE.md)
-- [BYAI Token 自动同步首次配置](CREDENTIAL_SYNC.md)
-- [完整更新说明](https://github.com/qnwhageqlavs-jpg/byai-local-workbench-releases/releases/download/v0.4.9/CHANGELOG.md)
-- [升级与迁移](https://github.com/qnwhageqlavs-jpg/byai-local-workbench-releases/releases/download/v0.4.9/MIGRATION.md)
-- [已知限制](https://github.com/qnwhageqlavs-jpg/byai-local-workbench-releases/releases/download/v0.4.9/KNOWN-LIMITATIONS.md)
+- [百应Token获取与管理员操作](CREDENTIAL_SYNC.md)
+- [完整更新说明](https://github.com/qnwhageqlavs-jpg/byai-local-workbench-releases/releases/download/v0.4.10/CHANGELOG.md)
+- [升级与迁移](https://github.com/qnwhageqlavs-jpg/byai-local-workbench-releases/releases/download/v0.4.10/MIGRATION.md)
+- [已知限制](https://github.com/qnwhageqlavs-jpg/byai-local-workbench-releases/releases/download/v0.4.10/KNOWN-LIMITATIONS.md)
 
-每任务可选择50、100、150、200、300、500并发，默认200；第三步可修复当前园区失效匹配，或明确全部解绑重配，并撤销最近一次操作。同园区已被其他任务使用的数据包排后并浅黄标记，仍允许共用。修复跨盘更新目录切换及遗留安装中状态；保留四步排期、人工预览同步、拖拽与自动规划、线路记忆、内置Python和加密Token同步。
+## 0.4.10
+系统设置直接获取百应当前有效Token，成功后隐藏保存并显示真实到期时间；管理员密码解锁后可明确强制刷新。日常不再依赖GitHub凭据发布与设备申请码。首次由负责人在各电脑保存AppSecret并设置本机固定管理员密码，安装包不含公司秘密或万能密码。CSMS仍按原方式更新。
 
-**旧更新器首次升级提醒：** 程序在C盘、数据和更新包在D盘时，旧版自动更新仍可能失败或卡在安装中。此时退出工作台后，使用0.4.9官方Setup覆盖原正式版程序目录，保留current/workbench-profile.json及其数据目录。旧helper无法仅靠发布新包自动修复；安装本版后后续更新使用新处理。
+普通获取不带强刷参数；强刷后其他电脑旧Token约五分钟后失效，需点击获取最新Token。管理员密码是本机工作台门禁，持有AppSecret的人仍可自行调用百应接口。百应获取接口单并发，多台电脑遇繁忙时稍后重试。
 
-数据库schema保持7，旧任务并发默认200，历史快照不改写；话术、排期、凭据与执行历史保留，正式/测试数据不自动合并，不自动开始外呼。实际并发能力仍取决于百应账号和线路额度。
+保留0.4.9的50/100/150/200/300/500并发、默认200、当前园区匹配修复和撤销、共享包排序，以及跨盘更新修复。保留四步排期、拖拽、自动规划、人工预览同步、线路记忆与内置Python。
 
-本次按用户授权跳过人工现场测试，已完成自动回归与安装包校验；企业网络、配额和透明加密仍需现场核对。内置Python依赖管理员白名单，同一百应账号下测试执行仍会创建真实任务。
+**旧更新器首次升级提醒：** 0.4.8及更早客户端程序在C盘、数据及更新包在D盘时仍可能更新失败；退出工作台后用最新官方Setup覆盖原程序目录，保留current/workbench-profile.json和数据目录。0.4.9起已修复更新器跨盘切换。
 
-Token文件与程序Release独立，CSMS保持原方式。客户资料、个人数据、明文凭据、私钥和数据库不得提交到本仓库。旧正式版本继续保留。
+schema保持7；话术、排期与执行历史保留，正式/测试数据不合并，不自动开始外呼。程序更新仍从GitHub下载，与Token直接获取独立。
+
+本版用户授权跳过人工现场验收，已完成自动回归与安装包校验；未用真实凭据执行OAuth强刷。企业网络、配额及透明加密仍需现场核对，内置Python需企业白名单。
+
+客户资料、明文凭据、私钥及数据库不得提交到本仓库。旧版本继续保留；旧GitHub Token文件仅供旧版本兼容，新版不再自动应用。
