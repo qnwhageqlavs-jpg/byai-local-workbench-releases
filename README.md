@@ -1,13 +1,20 @@
 # 百应外呼工作台发布与下载
 
-当前正式版本：**0.4.11**。本仓库提供Windows安装包、程序更新资产与员工指南，源码在私有仓库维护。
+当前正式版本：**0.5.1**。本仓库提供Windows安装包、程序更新资产与员工指南，源码在私有仓库维护。
 
-- [下载0.4.11](https://github.com/qnwhageqlavs-jpg/byai-local-workbench-releases/releases/tag/v0.4.11)
+- [下载0.5.1](https://github.com/qnwhageqlavs-jpg/byai-local-workbench-releases/releases/tag/v0.5.1)
 - [员工操作指南](USER_GUIDE.md)
 - [百应Token获取与管理员操作](CREDENTIAL_SYNC.md)
-- [完整更新说明](https://github.com/qnwhageqlavs-jpg/byai-local-workbench-releases/releases/download/v0.4.11/CHANGELOG.md)
-- [升级与迁移](https://github.com/qnwhageqlavs-jpg/byai-local-workbench-releases/releases/download/v0.4.11/MIGRATION.md)
-- [已知限制](https://github.com/qnwhageqlavs-jpg/byai-local-workbench-releases/releases/download/v0.4.11/KNOWN-LIMITATIONS.md)
+- [完整更新说明](https://github.com/qnwhageqlavs-jpg/byai-local-workbench-releases/releases/download/v0.5.1/CHANGELOG.md)
+- [升级与迁移](https://github.com/qnwhageqlavs-jpg/byai-local-workbench-releases/releases/download/v0.5.1/MIGRATION.md)
+- [已知限制](https://github.com/qnwhageqlavs-jpg/byai-local-workbench-releases/releases/download/v0.5.1/KNOWN-LIMITATIONS.md)
+
+## 0.5.1
+第三步可组合筛选、检查和执行当天任务，第四步查看执行进度与恢复。单条或批量开始只处理选中的检查通过任务。同一线路本次并发超过 1000 时需要额外确认。
+
+任务配置支持批量自动保存和搜索线路。设置页重排，CSMS Token 保存时去除首尾空白。启动回执异常时会核验原任务，未创建的任务可重新检查。程序重启后会恢复遗留的下载状态。
+
+旧版本下载或安装已经卡住时，退出工作台后运行 0.5.1 官方 Setup 覆盖原程序目录，保留环境配置和数据目录。
 
 ## 0.4.11
 修复更新时旧程序不能退出、界面一直停留在“正在安装”的问题。安装前限时等待已进入的写入完成；安装期间持续读取结果，明确提示旧程序未退出、安装失败或结果待确认。结果未知时不允许重复安装，保留安全诊断阶段与数字错误码。不自动强杀正在执行的任务。
