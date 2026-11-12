@@ -1,13 +1,18 @@
 # 百应外呼工作台发布与下载
 
-当前正式版本：**0.5.1**。本仓库提供Windows安装包、程序更新资产与员工指南，源码在私有仓库维护。
+当前正式版本：**0.5.2**。本仓库提供Windows安装包、程序更新资产与员工指南，源码在私有仓库维护。
 
-- [下载0.5.1](https://github.com/qnwhageqlavs-jpg/byai-local-workbench-releases/releases/tag/v0.5.1)
+- [下载0.5.2](https://github.com/qnwhageqlavs-jpg/byai-local-workbench-releases/releases/tag/v0.5.2)
 - [员工操作指南](USER_GUIDE.md)
 - [百应Token获取与管理员操作](CREDENTIAL_SYNC.md)
-- [完整更新说明](https://github.com/qnwhageqlavs-jpg/byai-local-workbench-releases/releases/download/v0.5.1/CHANGELOG.md)
-- [升级与迁移](https://github.com/qnwhageqlavs-jpg/byai-local-workbench-releases/releases/download/v0.5.1/MIGRATION.md)
-- [已知限制](https://github.com/qnwhageqlavs-jpg/byai-local-workbench-releases/releases/download/v0.5.1/KNOWN-LIMITATIONS.md)
+- [完整更新说明](https://github.com/qnwhageqlavs-jpg/byai-local-workbench-releases/releases/download/v0.5.2/CHANGELOG.md)
+- [升级与迁移](https://github.com/qnwhageqlavs-jpg/byai-local-workbench-releases/releases/download/v0.5.2/MIGRATION.md)
+- [已知限制](https://github.com/qnwhageqlavs-jpg/byai-local-workbench-releases/releases/download/v0.5.2/KNOWN-LIMITATIONS.md)
+
+## 0.5.2
+修复部分客群、批量查询 Excel 表格范围错误导致的清洗识别失败。重复批量导入同名任务时，按园区预览话术及重要性变化，确认后更新，保留任务身份与数据包绑定；取消则整次不应用。重要性按重点、启用、待定、停用递减，升级浅绿集中在前，降级浅红集中在后。第三步行内“开始检查”只检查当前任务。
+
+数据库 schema 仍为 7，话术、排期、执行历史和环境配置保留。正式版、测试版数据独立。已卡住的旧更新器仍可用本版官方 Setup 覆盖安装，保留原 profile 和数据目录。
 
 ## 0.5.1
 第三步可组合筛选、检查和执行当天任务，第四步查看执行进度与恢复。单条或批量开始只处理选中的检查通过任务。同一线路本次并发超过 1000 时需要额外确认。
@@ -26,6 +31,6 @@
 
 schema保持7；话术、排期与执行历史保留，正式/测试数据不合并，不自动开始外呼。程序更新仍从GitHub下载，与Token直接获取独立。
 
-本版用户授权跳过人工现场验收，已完成自动回归与安装包校验；未用真实凭据执行OAuth强刷。企业网络、配额及透明加密仍需现场核对，内置Python需企业白名单。
+本轮已在本地测试版验证，并完成自动回归与安装包校验；未用真实凭据执行OAuth强刷。企业网络、配额及透明加密仍需现场核对，内置Python需企业白名单。
 
 客户资料、明文凭据、私钥及数据库不得提交到本仓库。旧版本继续保留；旧GitHub Token文件仅供旧版本兼容，新版不再自动应用。
