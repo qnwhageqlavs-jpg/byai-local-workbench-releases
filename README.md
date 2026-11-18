@@ -1,13 +1,22 @@
 # 百应外呼工作台发布与下载
 
-当前正式版本：**0.5.2**。本仓库提供Windows安装包、程序更新资产与员工指南，源码在私有仓库维护。
+当前正式版本：**0.6.0**。本仓库提供Windows安装包、程序更新资产与员工指南，源码在私有仓库维护。
 
-- [下载0.5.2](https://github.com/qnwhageqlavs-jpg/byai-local-workbench-releases/releases/tag/v0.5.2)
+- [下载0.6.0](https://github.com/qnwhageqlavs-jpg/byai-local-workbench-releases/releases/tag/v0.6.0)
 - [员工操作指南](USER_GUIDE.md)
 - [百应Token获取与管理员操作](CREDENTIAL_SYNC.md)
-- [完整更新说明](https://github.com/qnwhageqlavs-jpg/byai-local-workbench-releases/releases/download/v0.5.2/CHANGELOG.md)
-- [升级与迁移](https://github.com/qnwhageqlavs-jpg/byai-local-workbench-releases/releases/download/v0.5.2/MIGRATION.md)
-- [已知限制](https://github.com/qnwhageqlavs-jpg/byai-local-workbench-releases/releases/download/v0.5.2/KNOWN-LIMITATIONS.md)
+- [完整更新说明](https://github.com/qnwhageqlavs-jpg/byai-local-workbench-releases/releases/download/v0.6.0/CHANGELOG.md)
+- [升级与迁移](https://github.com/qnwhageqlavs-jpg/byai-local-workbench-releases/releases/download/v0.6.0/MIGRATION.md)
+- [已知限制](https://github.com/qnwhageqlavs-jpg/byai-local-workbench-releases/releases/download/v0.6.0/KNOWN-LIMITATIONS.md)
+
+## 0.6.0
+默认使用独立窗口，右下角托盘可打开和退出；关闭窗口可选择收起或退出并记住选择。设置按用途分区。
+
+执行记录改为紧凑列表，依据失败阶段提供安全的重新执行或接续；已有远端任务不重复创建。检查失败保留具体中文原因，批量检查按任务隔离，共享故障只暂停受影响的后续任务。诊断包补充安全原因码。
+
+系统设置内置推广模块参考，可按名称或编号搜索，园区名称自行填写，现有映射不自动改动。更新器明确区分 GitHub 限流、访问受限与真正缺少发布附件。
+
+schema 仍为 7，数据和历史保留。旧客户端首次升级若卡住，可备份并退出后用官方 Setup 覆盖安装；缺少 WebView2 的压缩更新暂用浏览器模式。外部写入结果不明仍须人工核对。
 
 ## 0.5.2
 修复部分客群、批量查询 Excel 表格范围错误导致的清洗识别失败。重复批量导入同名任务时，按园区预览话术及重要性变化，确认后更新，保留任务身份与数据包绑定；取消则整次不应用。重要性按重点、启用、待定、停用递减，升级浅绿集中在前，降级浅红集中在后。第三步行内“开始检查”只检查当前任务。
