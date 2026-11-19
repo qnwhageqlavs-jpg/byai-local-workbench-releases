@@ -1,13 +1,20 @@
 # 百应外呼工作台发布与下载
 
-当前正式版本：**0.6.1**。本仓库提供Windows安装包、程序更新资产与员工指南，源码在私有仓库维护。
+当前正式版本：**0.6.2**。本仓库提供Windows安装包、程序更新资产与员工指南，源码在私有仓库维护。
 
-- [下载0.6.1](https://github.com/qnwhageqlavs-jpg/byai-local-workbench-releases/releases/tag/v0.6.1)
+- [下载0.6.2](https://github.com/qnwhageqlavs-jpg/byai-local-workbench-releases/releases/tag/v0.6.2)
 - [员工操作指南](USER_GUIDE.md)
 - [百应Token获取与管理员操作](CREDENTIAL_SYNC.md)
-- [完整更新说明](https://github.com/qnwhageqlavs-jpg/byai-local-workbench-releases/releases/download/v0.6.1/CHANGELOG.md)
-- [升级与迁移](https://github.com/qnwhageqlavs-jpg/byai-local-workbench-releases/releases/download/v0.6.1/MIGRATION.md)
-- [已知限制](https://github.com/qnwhageqlavs-jpg/byai-local-workbench-releases/releases/download/v0.6.1/KNOWN-LIMITATIONS.md)
+- [完整更新说明](https://github.com/qnwhageqlavs-jpg/byai-local-workbench-releases/releases/download/v0.6.2/CHANGELOG.md)
+- [升级与迁移](https://github.com/qnwhageqlavs-jpg/byai-local-workbench-releases/releases/download/v0.6.2/MIGRATION.md)
+- [已知限制](https://github.com/qnwhageqlavs-jpg/byai-local-workbench-releases/releases/download/v0.6.2/KNOWN-LIMITATIONS.md)
+
+## 0.6.2
+日历维护移至系统设置的“园区与业务配置”，移除生成排期页重复的执行状态按钮。保存日历不会自动重新排布或同步实际任务。
+
+检查通过且尚未开始执行的任务，可以在任务配置调整线路和并发，自动局部校验通过后仍待执行；旧确认失效，原历史和快照保留，同批其他任务可分别执行。已开始执行或写入结果未知的任务继续锁定；单次同线路累计超过1000并发仍须确认。
+
+默认内置读取器的相同文件核验可跨重启复用。首次升级可能重建一次缓存，外部Python每次重新准备文件；凭据变化与话术有效期校验保持。刷新文件池仅凭唯一一致的内容证据恢复原绑定，不自动替换为名称相似的其他包。
 
 ## 0.6.1
 统一任务状态与客服选择记忆；执行记录提供筛选、分页和右侧详情抽屉。诊断导出失败保留工作台，部分日志不可读时保留原文件并说明缺失；任务配置的“更新开工凭证”直接定位 CSMS 配置。
