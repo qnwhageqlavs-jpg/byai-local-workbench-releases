@@ -1,13 +1,18 @@
 # 百应外呼工作台发布与下载
 
-当前正式版本：**0.6.0**。本仓库提供Windows安装包、程序更新资产与员工指南，源码在私有仓库维护。
+当前正式版本：**0.6.1**。本仓库提供Windows安装包、程序更新资产与员工指南，源码在私有仓库维护。
 
-- [下载0.6.0](https://github.com/qnwhageqlavs-jpg/byai-local-workbench-releases/releases/tag/v0.6.0)
+- [下载0.6.1](https://github.com/qnwhageqlavs-jpg/byai-local-workbench-releases/releases/tag/v0.6.1)
 - [员工操作指南](USER_GUIDE.md)
 - [百应Token获取与管理员操作](CREDENTIAL_SYNC.md)
-- [完整更新说明](https://github.com/qnwhageqlavs-jpg/byai-local-workbench-releases/releases/download/v0.6.0/CHANGELOG.md)
-- [升级与迁移](https://github.com/qnwhageqlavs-jpg/byai-local-workbench-releases/releases/download/v0.6.0/MIGRATION.md)
-- [已知限制](https://github.com/qnwhageqlavs-jpg/byai-local-workbench-releases/releases/download/v0.6.0/KNOWN-LIMITATIONS.md)
+- [完整更新说明](https://github.com/qnwhageqlavs-jpg/byai-local-workbench-releases/releases/download/v0.6.1/CHANGELOG.md)
+- [升级与迁移](https://github.com/qnwhageqlavs-jpg/byai-local-workbench-releases/releases/download/v0.6.1/MIGRATION.md)
+- [已知限制](https://github.com/qnwhageqlavs-jpg/byai-local-workbench-releases/releases/download/v0.6.1/KNOWN-LIMITATIONS.md)
+
+## 0.6.1
+统一任务状态与客服选择记忆；执行记录提供筛选、分页和右侧详情抽屉。诊断导出失败保留工作台，部分日志不可读时保留原文件并说明缺失；任务配置的“更新开工凭证”直接定位 CSMS 配置。
+
+未执行排期按日期正序，已执行倒序；仪表盘和执行记录均可选择每页10/20/50/100条。保留原数据和历史，schema仍为7。
 
 ## 0.6.0
 默认使用独立窗口，右下角托盘可打开和退出；关闭窗口可选择收起或退出并记住选择。设置按用途分区。
