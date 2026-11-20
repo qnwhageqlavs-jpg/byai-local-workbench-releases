@@ -1,13 +1,21 @@
 # 百应外呼工作台发布与下载
 
-当前正式版本：**0.6.3**。本仓库提供Windows安装包、程序更新资产与员工指南，源码在私有仓库维护。
+当前正式版本：**0.6.4**。本仓库提供Windows安装包、程序更新资产与员工指南，源码在私有仓库维护。
 
-- [下载0.6.3](https://github.com/qnwhageqlavs-jpg/byai-local-workbench-releases/releases/tag/v0.6.3)
+- [下载0.6.4](https://github.com/qnwhageqlavs-jpg/byai-local-workbench-releases/releases/tag/v0.6.4)
 - [员工操作指南](USER_GUIDE.md)
 - [百应Token获取与管理员操作](CREDENTIAL_SYNC.md)
-- [完整更新说明](https://github.com/qnwhageqlavs-jpg/byai-local-workbench-releases/releases/download/v0.6.3/CHANGELOG.md)
-- [升级与迁移](https://github.com/qnwhageqlavs-jpg/byai-local-workbench-releases/releases/download/v0.6.3/MIGRATION.md)
-- [已知限制](https://github.com/qnwhageqlavs-jpg/byai-local-workbench-releases/releases/download/v0.6.3/KNOWN-LIMITATIONS.md)
+- [完整更新说明](https://github.com/qnwhageqlavs-jpg/byai-local-workbench-releases/releases/download/v0.6.4/CHANGELOG.md)
+- [升级与迁移](https://github.com/qnwhageqlavs-jpg/byai-local-workbench-releases/releases/download/v0.6.4/MIGRATION.md)
+- [已知限制](https://github.com/qnwhageqlavs-jpg/byai-local-workbench-releases/releases/download/v0.6.4/KNOWN-LIMITATIONS.md)
+
+## 0.6.4
+
+执行工作台现为“配置与执行”“执行进度”两个页面。统一表格中按园区（多选）、名称、线路和检查状态筛选，勾选后批量配置线路、并发和客服，再逐条或批量检查、执行。配置自动保存并记忆，检查后修改线路/并发自动局部校验，状态读取失败或保存未完成时禁止使用旧结果启动；同线路本次累计并发超过1000仍须确认。
+
+“账号与凭据”小窗可普通获取最新BYAI Token、保存CSMS Token；复杂配置与管理员操作仍在系统设置，账号与接口为首项。CSMS只影响需要客服的任务。
+
+旧任务/运行详情统一定位右侧抽屉，集中查看中文业务状态、北京时间线、远端运行快照、诊断/回执与安全恢复。打开详情不会启动外呼，远端状态由用户手动同步；外部结果未知时继续先核对，防止重复创建。
 
 ## 0.6.3
 修复同名园区被分成多个园区的问题。新建时沿用已有园区，排期工作台与仪表盘统一归组；不同任务集中展示，同名任务采用最新导入配置，原执行历史和计划关联保留。
