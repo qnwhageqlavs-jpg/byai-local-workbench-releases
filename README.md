@@ -1,13 +1,20 @@
 # 百应外呼工作台发布与下载
 
-当前正式版本：**0.6.2**。本仓库提供Windows安装包、程序更新资产与员工指南，源码在私有仓库维护。
+当前正式版本：**0.6.3**。本仓库提供Windows安装包、程序更新资产与员工指南，源码在私有仓库维护。
 
-- [下载0.6.2](https://github.com/qnwhageqlavs-jpg/byai-local-workbench-releases/releases/tag/v0.6.2)
+- [下载0.6.3](https://github.com/qnwhageqlavs-jpg/byai-local-workbench-releases/releases/tag/v0.6.3)
 - [员工操作指南](USER_GUIDE.md)
 - [百应Token获取与管理员操作](CREDENTIAL_SYNC.md)
-- [完整更新说明](https://github.com/qnwhageqlavs-jpg/byai-local-workbench-releases/releases/download/v0.6.2/CHANGELOG.md)
-- [升级与迁移](https://github.com/qnwhageqlavs-jpg/byai-local-workbench-releases/releases/download/v0.6.2/MIGRATION.md)
-- [已知限制](https://github.com/qnwhageqlavs-jpg/byai-local-workbench-releases/releases/download/v0.6.2/KNOWN-LIMITATIONS.md)
+- [完整更新说明](https://github.com/qnwhageqlavs-jpg/byai-local-workbench-releases/releases/download/v0.6.3/CHANGELOG.md)
+- [升级与迁移](https://github.com/qnwhageqlavs-jpg/byai-local-workbench-releases/releases/download/v0.6.3/MIGRATION.md)
+- [已知限制](https://github.com/qnwhageqlavs-jpg/byai-local-workbench-releases/releases/download/v0.6.3/KNOWN-LIMITATIONS.md)
+
+## 0.6.3
+修复同名园区被分成多个园区的问题。新建时沿用已有园区，排期工作台与仪表盘统一归组；不同任务集中展示，同名任务采用最新导入配置，原执行历史和计划关联保留。
+
+合并时同时保留排期、改期、跳过、呼叫次数、单次加排、周期模板及撤销备份。配置变化仍须手动预览并确认同步，已检查和执行记录继续保护；反复载入不会重新拆出同名园区。
+
+旧文档缺少导入时间时，采用文档中后出现的配置，首次同步前请核对话术、数据包及任务分类。历史实际绑定不同的任务可保留为不同变体，首次同步可能包含一次身份元数据对齐。下载源继续GitHub，后台自动下载尚未接入。
 
 ## 0.6.2
 日历维护移至系统设置的“园区与业务配置”，移除生成排期页重复的执行状态按钮。保存日历不会自动重新排布或同步实际任务。
